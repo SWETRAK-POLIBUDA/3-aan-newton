@@ -26,6 +26,16 @@ int main() {
     cout<<"Podaj punkt: ";
     cin>>p;
 
+    for(int i = 0; i< wezly-1; i++){
+        if(x[i] >= x[i + 1]){
+            return 100;
+        }
+    }
+
+    if(!(p>=x[0] && p<=x[wezly-1])){
+        return 101;
+    }
+
 
     cout<<"Wynik to: "<<newton(p, x, y, wezly)<<endl;
     return 0;
